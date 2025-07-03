@@ -8,11 +8,15 @@ from shot import Shot
 
 def main():
     pygame.init()
+    pygame.font.init()
     pygame.display.set_caption('Galactic Battles')
 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     clock = pygame.time.Clock()
     dt = 0 # delta time
+    score = 0
+
+    font = pygame.font.Font(None, 36)
 
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
@@ -44,12 +48,16 @@ def main():
                 if asteroid.check_for_collisions(bullet):
                     bullet.kill()
                     asteroid.split()
+                    score += SCORE_INCREMENT
             
 
         screen.fill("black")
 
         for obj in drawable:
             obj.draw(screen)
+
+        score_text = font.render(f'Score: {score}', True, (255, 255, 255))
+        screen.blit(score_text, (10, 10))
             
         pygame.display.flip()
 
