@@ -1,4 +1,4 @@
-# 🌌 Galactic Battles: The Ultimate Cosmic Showdown 🚀
+# 🌌 Galactic Battles: The Ultimate Cosmic Showdown 🌌
 
 > **A masterpiece by the same visionary mind~s~ who definitely did *not* make World of Warcraft.**
 
